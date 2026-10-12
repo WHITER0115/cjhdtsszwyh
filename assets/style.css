@@ -60,7 +60,7 @@ strong{color:var(--gold)}
 /* ===== 导航（液态玻璃条） ===== */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;
+  display:flex;align-items:center;gap:14px;
   padding:12px 22px;
   background:rgba(10,11,20,.55);
   backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);
@@ -72,7 +72,7 @@ strong{color:var(--gold)}
   font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:2px;
   color:var(--gold);text-shadow:0 0 16px rgba(232,198,107,.45);
 }
-.nav-links{display:flex;gap:22px;list-style:none;font-size:14.5px}
+.nav-links{display:flex;gap:22px;list-style:none;font-size:14.5px;margin-left:auto}
 .nav-links a{color:var(--muted);transition:color .2s;position:relative;padding:4px 0}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
 .nav-links a.active::after{
@@ -80,6 +80,19 @@ strong{color:var(--gold)}
   background:linear-gradient(90deg,var(--gold),var(--purple));
   box-shadow:0 0 10px var(--purple);
 }
+.nav-right{display:flex;align-items:center;gap:10px}
+/* 中英文切换按钮（液态玻璃质感） */
+.lang-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:46px;height:34px;padding:0 12px;border-radius:999px;
+  font-size:13px;font-weight:700;letter-spacing:.5px;cursor:pointer;
+  color:var(--ink);background:var(--glass);
+  border:1px solid var(--line);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:transform .25s,box-shadow .25s,border-color .25s,background .25s;
+}
+.lang-toggle:hover{transform:translateY(-1px);border-color:var(--purple);box-shadow:0 0 22px rgba(155,109,255,.4);background:rgba(155,109,255,.12)}
+.lang-toggle:active{transform:translateY(0)}
 .nav-toggle{display:none;background:none;border:0;color:var(--ink);font-size:24px;cursor:pointer}
 
 /* ===== Hero ===== */
@@ -91,12 +104,15 @@ strong{color:var(--gold)}
 .hero-inner{position:relative;z-index:2;max-width:920px}
 .hero-kicker{letter-spacing:6px;color:var(--purple);font-size:14px;margin-bottom:18px;text-transform:uppercase}
 .hero-title{
-  font-size:clamp(46px,11vw,128px);letter-spacing:6px;line-height:1;
+  font-size:clamp(26px,6.6vw,72px);
+  letter-spacing:clamp(1px,.4vw,4px);
+  line-height:1;max-width:100%;
   background:linear-gradient(180deg,#fff 0%,var(--gold) 52%,var(--purple) 115%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
   text-shadow:0 0 50px rgba(232,198,107,.25);
   animation:glow 4s ease-in-out infinite alternate;
 }
+@media (max-width:520px){.hero-title{letter-spacing:1px}}
 @keyframes glow{from{filter:drop-shadow(0 0 8px rgba(155,109,255,.4))}to{filter:drop-shadow(0 0 30px rgba(232,198,107,.6))}}
 .hero-sub{font-family:var(--serif);font-size:clamp(20px,4vw,34px);margin-top:14px;color:var(--ink)}
 .hero-tag{margin-top:20px;color:var(--muted);font-size:clamp(14px,2.4vw,18px);font-style:italic}
@@ -255,6 +271,7 @@ strong{color:var(--gold)}
   .nav-links.open{max-height:420px}
   .nav-links li{padding:10px 22px}
   .nav-toggle{display:block}
+  .nav-right{margin-left:auto}
   .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
   .section{padding:60px 0}
   .hero-meta{font-size:11px}

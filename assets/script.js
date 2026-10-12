@@ -1,3 +1,42 @@
+// ===== 中英文切换 =====
+(function () {
+  const KEY = 'cjhdtsszwyh-lang';
+  const toggle = document.getElementById('langToggle');
+  const docHtml = document.documentElement;
+  const TITLES = {
+    zh: 'CJHDTSSZWYH · 崔家黑洞吞噬孙子委员会 | 混沌宇宙终焉体企业集团',
+    en: 'CJHDTSSZWYH · Cui Family Black-Hole Devouring-Grandson Committee | Chaos-Verse Terminal-Entity Conglomerate'
+  };
+  const META_DESC_ZH = '崔家黑洞吞噬孙子委员会（CJHDTSSZWYH）官方门户——混沌宇宙终焉体企业集团。创始四君共治，十七席终焉体全员名录、事业部、混沌联动技与荒诞经营范围一览。';
+  const META_DESC_EN = 'Official portal of the Cui Family Black-Hole Devouring-Grandson Committee (CJHDTSSZWYH) — a Chaos-Verse terminal-entity conglomerate. Co-governed by the Four Founding Sovereigns; 17 members, divisions, chaos linkage and absurd business scope.';
+
+  // 收集所有带 data-en 的元素，首次保存中文原文
+  const nodes = Array.from(document.querySelectorAll('[data-en]'));
+  nodes.forEach(n => { if (!n.dataset.zh) n.dataset.zh = n.innerHTML; });
+  const phInput = document.getElementById('rosterSearch');
+  if (phInput && phInput.dataset.enPh) phInput.dataset.phZh = phInput.placeholder;
+
+  function setLang(lang) {
+    const en = lang === 'en';
+    docHtml.lang = en ? 'en' : 'zh-CN';
+    nodes.forEach(n => { n.innerHTML = en ? n.dataset.en : n.dataset.zh; });
+    if (phInput) phInput.placeholder = en ? phInput.dataset.enPh : phInput.dataset.phZh;
+    document.title = TITLES[lang];
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', en ? META_DESC_EN : META_DESC_ZH);
+    if (toggle) toggle.textContent = en ? '中' : 'EN';
+    document.body.classList.toggle('lang-en', en);
+    try { localStorage.setItem(KEY, lang); } catch (e) {}
+    if (window.__updateRosterCount) window.__updateRosterCount();
+  }
+
+  const saved = (function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } })();
+  setLang(saved === 'en' ? 'en' : 'zh');
+  if (toggle) toggle.addEventListener('click', () => {
+    setLang(docHtml.lang === 'en' ? 'zh' : 'en');
+  });
+})();
+
 // ===== 移动端菜单 =====
 (function () {
   const toggle = document.querySelector('.nav-toggle');
@@ -31,7 +70,7 @@
   sections.forEach(s => obs.observe(s));
 })();
 
-// ===== 名录搜索过滤 =====
+// ===== 名录搜索过滤（中英双语） =====
 (function () {
   const input = document.getElementById('rosterSearch');
   const grid = document.getElementById('rosterGrid');
@@ -39,23 +78,28 @@
   if (!input || !grid) return;
   const cards = Array.from(grid.querySelectorAll('.member-card'));
   const total = cards.length;
+  const en = () => document.documentElement.lang === 'en';
 
   function update() {
     const q = input.value.trim().toLowerCase();
     let shown = 0;
     cards.forEach(card => {
-      const hay = (card.dataset.name + ' ' + card.dataset.level + ' ' +
-        card.querySelector('.title-name').textContent).toLowerCase();
+      const names = (card.dataset.name || '') + ' ' + (card.dataset.enName || '') + ' ';
+      const texts = card.querySelectorAll('[data-en]');
+      let hay = names;
+      texts.forEach(t => { hay += t.textContent + ' '; });
+      hay = hay.toLowerCase();
       const match = q === '' || hay.includes(q);
       card.classList.toggle('hide', !match);
       if (match) shown++;
     });
     if (count) {
       count.textContent = q === ''
-        ? `共 ${total} 席`
-        : `匹配 ${shown} / ${total} 席`;
+        ? (en() ? `${total} seats total` : `共 ${total} 席`)
+        : (en() ? `matched ${shown} / ${total}` : `匹配 ${shown} / ${total} 席`);
     }
   }
+  window.__updateRosterCount = update;
   input.addEventListener('input', update);
   update();
 })();

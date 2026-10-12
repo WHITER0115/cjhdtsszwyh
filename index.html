@@ -20,7 +20,7 @@
   "founder": [
     {"@type":"Person","name":"郭浩然"},
     {"@type":"Person","name":"崔梓轩"},
-    {"@type":"Person","name":"崔宇轩"},
+    {"type":"Person","name":"崔宇轩"},
     {"@type":"Person","name":"韩昀修"}
   ],
   "slogan": "吞噬冗余，分娩秩序；以神谕之姿，行市井之事。"
@@ -42,16 +42,19 @@
 <!-- ============ 导航 ============ -->
 <nav id="nav" class="nav">
   <a class="nav-brand" href="#home">CJHDTSSZWYH</a>
-  <button class="nav-toggle" aria-label="菜单">☰</button>
+  <div class="nav-right">
+    <button class="lang-toggle" id="langToggle" aria-label="切换语言">EN</button>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+  </div>
   <ul class="nav-links">
-    <li><a href="#home">首页</a></li>
-    <li><a href="#world">世界观</a></li>
-    <li><a href="#founders">创始四君</a></li>
-    <li><a href="#system">职务体系</a></li>
-    <li><a href="#roster">全员名录</a></li>
-    <li><a href="#divisions">事业部</a></li>
-    <li><a href="#links">联动技</a></li>
-    <li><a href="#business">经营范围</a></li>
+    <li><a href="#home" data-en="Home">首页</a></li>
+    <li><a href="#world" data-en="Worldview">世界观</a></li>
+    <li><a href="#founders" data-en="Founders">创始四君</a></li>
+    <li><a href="#system" data-en="Ranks">职务体系</a></li>
+    <li><a href="#roster" data-en="Members">全员名录</a></li>
+    <li><a href="#divisions" data-en="Divisions">事业部</a></li>
+    <li><a href="#links" data-en="Linkage">联动技</a></li>
+    <li><a href="#business" data-en="Business">经营范围</a></li>
   </ul>
 </nav>
 
@@ -59,15 +62,15 @@
 <header id="home" class="hero">
   <div class="hero-stars" aria-hidden="true"></div>
   <div class="hero-inner">
-    <p class="hero-kicker">混沌宇宙 · 终焉体企业集团</p>
+    <p class="hero-kicker" data-en="Chaos-Verse · Terminal-Entity Conglomerate">混沌宇宙 · 终焉体企业集团</p>
     <h1 class="hero-title">CJHDTSSZWYH</h1>
-    <p class="hero-sub">崔家黑洞吞噬孙子委员会</p>
-    <p class="hero-tag">吞噬冗余，分娩秩序；以神谕之姿，行市井之事。</p>
+    <p class="hero-sub" data-en="Cui Family Black-Hole Devouring-Grandson Committee">崔家黑洞吞噬孙子委员会</p>
+    <p class="hero-tag" data-en="Devour the redundant, deliver order; in the bearing of an oracle, the deeds of the mundane.">吞噬冗余，分娩秩序；以神谕之姿，行市井之事。</p>
     <div class="hero-cta">
-      <a class="btn btn-gold" href="#roster">查看十七席名录</a>
-      <a class="btn btn-ghost" href="#world">了解世界观</a>
+      <a class="btn btn-gold" href="#roster" data-en="View 17 Members">查看十七席名录</a>
+      <a class="btn btn-ghost" href="#world" data-en="Explore Worldview">了解世界观</a>
     </div>
-    <p class="hero-meta">有限责任公司（终焉体控股） · 四君共治 · 注册资本 ¥25.00 · 经营期限：奇点大爆炸 → 宇宙热寂</p>
+    <p class="hero-meta" data-en="LLC (Terminal-Entity Holding) · Co-governed by Four Sovereigns · Registered Capital ¥25.00 · Term: Big Bang → Universal Heat Death">有限责任公司（终焉体控股） · 四君共治 · 注册资本 ¥25.00 · 经营期限：奇点大爆炸 → 宇宙热寂</p>
   </div>
   <a class="scroll-hint" href="#world" aria-label="向下滚动">▼</a>
 </header>
@@ -75,32 +78,32 @@
 <!-- ============ 世界观 ============ -->
 <section id="world" class="section">
   <div class="container">
-    <h2 class="section-title"><span class="num">01</span>世界观总纲</h2>
-    <p class="lead">一个以「终焉体」为存在形态的荒诞神谕式委员会，坐落于崔家黑洞事件视界环形办公区，恒温、抗吞噬、可跨维度远程值守。</p>
+    <h2 class="section-title"><span class="num">01</span><span data-en="Worldview Charter">世界观总纲</span></h2>
+    <p class="lead" data-en="An absurd, oracle-like committee existing as 'Terminal-Entities', seated on the event-horizon ring office of the Cui Family Black Hole — climate-controlled, devour-proof, remotely staffed across dimensions.">一个以「终焉体」为存在形态的荒诞神谕式委员会，坐落于崔家黑洞事件视界环形办公区，恒温、抗吞噬、可跨维度远程值守。</p>
 
     <div class="grid-3">
       <div class="card soft">
-        <h3>宇宙名称</h3>
-        <p><strong>混沌宇宙</strong><br/>核心组织：崔家黑洞吞噬孙子委员会</p>
+        <h3 data-en="Universe Name">宇宙名称</h3>
+        <p><strong data-en="Chaos-Verse">混沌宇宙</strong><br/><span data-en="Core Org: Cui Family Black-Hole Devouring-Grandson Committee">核心组织：崔家黑洞吞噬孙子委员会</span></p>
       </div>
       <div class="card soft">
-        <h3>组织性质</h3>
-        <p>以「终焉体」为存在形态的神谕式委员会，成员按职务分级，从「创始四君」到「孙员级」再到「特殊身份」，共 <strong>17 位</strong>。</p>
+        <h3 data-en="Nature">组织性质</h3>
+        <p data-en="An oracle-like committee existing as 'Terminal-Entities', members tiered by office — from the Four Founding Sovereigns to Apprentice Grandsons to Special Identities, 17 in total.">以「终焉体」为存在形态的神谕式委员会，成员按职务分级，从「创始四君」到「孙员级」再到「特殊身份」，共 <strong>17 位</strong>。</p>
       </div>
       <div class="card soft">
-        <h3>语言风格</h3>
-        <p>严肃中带荒诞 · 神谕感 + 市井气。命名常融合熵增、量子、因果、锈蚀、哭坟、孝道、悖论、终焉等概念。</p>
+        <h3 data-en="Language Style">语言风格</h3>
+        <p data-en="Solemn yet absurd · oracle-feel + streetwise. Names fuse entropy-increase, quantum, causality, rust, grave-wailing, filial piety, paradox, terminality.">严肃中带荒诞 · 神谕感 + 市井气。命名常融合熵增、量子、因果、锈蚀、哭坟、孝道、悖论、终焉等概念。</p>
       </div>
     </div>
 
     <div class="formula card soft">
-      <h3>命名总公式</h3>
-      <p class="formula-line">「核心本质 / 权能」 ＋ 「行为 / 状态」× N ＋ 「终焉体」</p>
+      <h3 data-en="Naming Formula">命名总公式</h3>
+      <p class="formula-line" data-en="Core Essence / Authority + Behavior / State × N + Terminal-Entity">「核心本质 / 权能」 ＋ 「行为 / 状态」× N ＋ 「终焉体」</p>
       <ul class="formula-list">
-        <li><span class="tag">前缀</span> 核心权能（如熵增、量子、锈蚀、混沌）</li>
-        <li><span class="tag">中缀</span> 3~6 个行为 / 状态描述，以「·」分隔</li>
-        <li><span class="tag">后缀</span> 必含「终焉体」或「终焉X体」（X 为单字属性）</li>
-        <li><span class="tag">字数</span> 全称 20~40 字（不含标点与「·」）</li>
+        <li><span class="tag" data-en="Prefix">前缀</span> <span data-en="Core authority (e.g. entropy-increase, quantum, rust, chaos)">核心权能（如熵增、量子、锈蚀、混沌）</span></li>
+        <li><span class="tag" data-en="Infix">中缀</span> <span data-en="3–6 behavior/state phrases, separated by '·'">3~6 个行为 / 状态描述，以「·」分隔</span></li>
+        <li><span class="tag" data-en="Suffix">后缀</span> <span data-en="must contain 'Terminal-Entity' or 'Terminal-X-Entity' (X = a single-char attribute)">必含「终焉体」或「终焉X体」（X 为单字属性）</span></li>
+        <li><span class="tag" data-en="Length">字数</span> <span data-en="full name 20–40 chars (excluding punctuation and '·')">全称 20~40 字（不含标点与「·」）</span></li>
       </ul>
     </div>
   </div>
@@ -109,56 +112,56 @@
 <!-- ============ 创始四君 ============ -->
 <section id="founders" class="section section-alt">
   <div class="container">
-    <h2 class="section-title"><span class="num">02</span>创始四君（实际老板 · 董事会）</h2>
-    <p class="lead">本公司股东为创始四君，合称「四君」。互为平等共有人，享有表决权、分红权与奇点处置权，并为本公司之实际老板与最终责任人。重大事项须四君一致同意。</p>
+    <h2 class="section-title"><span class="num">02</span><span data-en="The Four Founding Sovereigns (Actual Owners · Board)">创始四君（实际老板 · 董事会）</span></h2>
+    <p class="lead" data-en="The shareholders are the Four Founding Sovereigns, jointly called 'the Four Sovereigns'. Equal co-owners with voting, dividend and singularity-disposal rights — the actual owners and ultimate liability bearers. Major matters require unanimous consent.">本公司股东为创始四君，合称「四君」。互为平等共有人，享有表决权、分红权与奇点处置权，并为本公司之实际老板与最终责任人。重大事项须四君一致同意。</p>
     <div class="grid-4">
       <article class="card founder">
-        <span class="lv lv-founder">董事长（轮值）</span>
-        <h3 class="member">郭浩然</h3>
-        <p class="title-name">熵增煎饼之神·鳌子吞噬者·伦理崩坏料理王·平行世界葱花大君</p>
-        <p class="power">核心权能：熵增料理 · 平行宇宙摊饼</p>
+        <span class="lv lv-founder" data-en="Chairman (Rotating)">董事长（轮值）</span>
+        <h3 class="member" data-en="Guo Haoran">郭浩然</h3>
+        <p class="title-name" data-en="God of Entropic Jianbing · Devourer of the Griddle · King of Ethics-Collapsing Cuisine · Grand Onion-Lord of Parallel Worlds">熵增煎饼之神·鳌子吞噬者·伦理崩坏料理王·平行世界葱花大君</p>
+        <p class="power" data-en="Core Authority: Entropic Cuisine · Multiversal Jianbing">核心权能：熵增料理 · 平行宇宙摊饼</p>
       </article>
       <article class="card founder">
-        <span class="lv lv-founder">副董事长</span>
-        <h3 class="member">崔梓轩</h3>
-        <p class="title-name">量子哭坟瘟疫·悲鸣模因聚合体·电子喷呐交响指挥</p>
-        <p class="power">核心权能：量子哭坟 · 哀乐模因</p>
+        <span class="lv lv-founder" data-en="Vice-Chairman">副董事长</span>
+        <h3 class="member" data-en="Cui Zixuan">崔梓轩</h3>
+        <p class="title-name" data-en="Quantum Wailing-Plague · Aggregate of Lament Memes · Conductor of the Electronic Suona Symphony">量子哭坟瘟疫·悲鸣模因聚合体·电子喷呐交响指挥</p>
+        <p class="power" data-en="Core Authority: Quantum Grave-Wail · Funeral Memes">核心权能：量子哭坟 · 哀乐模因</p>
       </article>
       <article class="card founder">
-        <span class="lv lv-founder">副董事长</span>
-        <h3 class="member">崔宇轩</h3>
-        <p class="title-name">因果律寿衣编织者·时间线入殓师·暗物质裹尸布主宰</p>
-        <p class="power">核心权能：因果入殓 · 时间线缝合</p>
+        <span class="lv lv-founder" data-en="Vice-Chairman">副董事长</span>
+        <h3 class="member" data-en="Cui Yuxuan">崔宇轩</h3>
+        <p class="title-name" data-en="Weaver of Causal Shrouds · Timelines' Undertaker · Sovereign of the Dark-Matter Funeral Linen">因果律寿衣编织者·时间线入殓师·暗物质裹尸布主宰</p>
+        <p class="power" data-en="Core Authority: Causal Funeral · Timeline Stitching">核心权能：因果入殓 · 时间线缝合</p>
       </article>
       <article class="card founder">
-        <span class="lv lv-founder">副董事长</span>
-        <h3 class="member">韩昀修</h3>
-        <p class="title-name">养老金型真空衰变·经济末日精算师·K线图人形黑洞</p>
-        <p class="power">核心权能：经济末日精算 · 真空衰变</p>
+        <span class="lv lv-founder" data-en="Vice-Chairman">副董事长</span>
+        <h3 class="member" data-en="Han Yunxiu">韩昀修</h3>
+        <p class="title-name" data-en="Pension-Type Vacuum Decay · Actuary of Economic Doomsday · The Human K-Line Black Hole">养老金型真空衰变·经济末日精算师·K线图人形黑洞</p>
+        <p class="power" data-en="Core Authority: Economic Doomsday Actuary · Vacuum Decay">核心权能：经济末日精算 · 真空衰变</p>
       </article>
     </div>
-    <p class="note">总经理（正洞级）：<strong>王凯乐</strong> · 永恒叛逆观测者·量子童话聚合体·文明退行诅咒·无所谓领域绝对主宰——享有「无所谓领域绝对主宰」之最终拍板权。</p>
+    <p class="note" data-en="General Manager (Top-Cave Level): Wang Kaile · Eternal Observer of Rebellion · Quantum Fairy-Tale Aggregate · Curse of Civilizational Regression · Absolute Sovereign of the Whatever-Field — holds the final say of the 'Absolute Sovereign of the Whatever-Field'.">总经理（正洞级）：<strong>王凯乐</strong> · 永恒叛逆观测者·量子童话聚合体·文明退行诅咒·无所谓领域绝对主宰——享有「无所谓领域绝对主宰」之最终拍板权。</p>
   </div>
 </section>
 
 <!-- ============ 职务体系 ============ -->
 <section id="system" class="section">
   <div class="container">
-    <h2 class="section-title"><span class="num">03</span>职务体系（洞—噬—咀—嘬—孙）</h2>
-    <p class="lead">本公司实行「洞—噬—咀—嘬—孙」五级职务体系，共编制十七席，另设特殊身份（概念级存在）。</p>
+    <h2 class="section-title"><span class="num">03</span><span data-en="Rank System (Cave—Devour—Mouth—Sip—Grandson)">职务体系（洞—噬—咀—嘬—孙）</span></h2>
+    <p class="lead" data-en="The company applies a five-tier rank system of 'Cave—Devour—Mouth—Sip—Grandson', staffing 17 seats in total, plus Special Identities (conceptual existences).">本公司实行「洞—噬—咀—嘬—孙」五级职务体系，共编制十七席，另设特殊身份（概念级存在）。</p>
     <div class="table-wrap">
       <table class="doc-table">
-        <thead><tr><th>层级</th><th>编制人数</th><th>职级含义</th></tr></thead>
+        <thead><tr><th data-en="Tier">层级</th><th data-en="Headcount">编制人数</th><th data-en="Role Meaning">职级含义</th></tr></thead>
         <tbody>
-          <tr><td>创始四君</td><td>4</td><td>股东 · 董事会（实际老板）</td></tr>
-          <tr><td>正洞级领导</td><td>1</td><td>总经理</td></tr>
-          <tr><td>副噬级干部</td><td>1</td><td>跨维度副总</td></tr>
-          <tr><td>正咀级干部</td><td>4</td><td>事业部总监</td></tr>
-          <tr><td>副咀级干部</td><td>0</td><td>事业部副总监</td></tr>
-          <tr><td>正嘬级干部</td><td>0</td><td>业务主管</td></tr>
-          <tr><td>副嘬级干部</td><td>1</td><td>业务副主管</td></tr>
-          <tr><td>孙员级</td><td>4</td><td>实习孙员</td></tr>
-          <tr><td>特殊身份</td><td>2</td><td>概念级存在</td></tr>
+          <tr><td data-en="Founding Four Sovereigns">创始四君</td><td>4</td><td data-en="Shareholders · Board (actual owners)">股东 · 董事会（实际老板）</td></tr>
+          <tr><td data-en="Top-Cave Leader">正洞级领导</td><td>1</td><td data-en="General Manager">总经理</td></tr>
+          <tr><td data-en="Sub-Devour Cadre">副噬级干部</td><td>1</td><td data-en="Transdimensional VP">跨维度副总</td></tr>
+          <tr><td data-en="Top-Mouth Cadre">正咀级干部</td><td>4</td><td data-en="Division Director">事业部总监</td></tr>
+          <tr><td data-en="Sub-Mouth Cadre">副咀级干部</td><td>0</td><td data-en="Division Deputy Director">事业部副总监</td></tr>
+          <tr><td data-en="Top-Sip Cadre">正嘬级干部</td><td>0</td><td data-en="Business Supervisor">业务主管</td></tr>
+          <tr><td data-en="Sub-Sip Cadre">副嘬级干部</td><td>1</td><td data-en="Business Deputy Supervisor">业务副主管</td></tr>
+          <tr><td data-en="Apprentice Grandson">孙员级</td><td>4</td><td data-en="Intern Grandson">实习孙员</td></tr>
+          <tr><td data-en="Special Identity">特殊身份</td><td>2</td><td data-en="Conceptual Existence">概念级存在</td></tr>
         </tbody>
       </table>
     </div>
@@ -168,83 +171,67 @@
 <!-- ============ 全员名录 ============ -->
 <section id="roster" class="section section-alt">
   <div class="container">
-    <h2 class="section-title"><span class="num">04</span>全员职务名录（十七席）</h2>
-    <p class="lead">以下为全体正式成员之终焉体全称，悉依原始提供版本，未作更改。可输入姓名或关键词即时筛选。</p>
+    <h2 class="section-title"><span class="num">04</span><span data-en="Full Member Registry (17 Seats)">全员职务名录（十七席）</span></h2>
+    <p class="lead" data-en="Below are the Terminal-Entity full titles of all official members, exactly as originally provided, unaltered. Type a name or keyword to filter instantly.">以下为全体正式成员之终焉体全称，悉依原始提供版本，未作更改。可输入姓名或关键词即时筛选。</p>
     <div class="search-box">
-      <input id="rosterSearch" type="search" placeholder="搜索成员姓名 / 终焉体关键词，如：郭浩然、锈、哭坟、煎饼……" aria-label="搜索成员" />
+      <input id="rosterSearch" type="search" placeholder="搜索成员姓名 / 终焉体关键词，如：郭浩然、锈、哭坟、煎饼……" data-en-ph="Search member name / terminal-entity keyword, e.g. Guo Haoran, rust, wail, jianbing…" aria-label="搜索成员" />
       <span id="rosterCount" class="search-count"></span>
     </div>
     <div id="rosterGrid" class="grid-roster">
-      <article class="card member-card" data-name="郭浩然" data-level="创始四君"><div class="card-top"><span class="lv lv-f">创始四君</span><span class="no">01</span></div><h3 class="member">郭浩然</h3><p class="title-name">熵增煎饼之神·鳌子吞噬者·伦理崩坏料理王·平行世界葱花大君</p></article>
-      <article class="card member-card" data-name="崔梓轩" data-level="创始四君"><div class="card-top"><span class="lv lv-f">创始四君</span><span class="no">02</span></div><h3 class="member">崔梓轩</h3><p class="title-name">量子哭坟瘟疫·悲鸣模因聚合体·电子喷呐交响指挥</p></article>
-      <article class="card member-card" data-name="崔宇轩" data-level="创始四君"><div class="card-top"><span class="lv lv-f">创始四君</span><span class="no">03</span></div><h3 class="member">崔宇轩</h3><p class="title-name">因果律寿衣编织者·时间线入殓师·暗物质裹尸布主宰</p></article>
-      <article class="card member-card" data-name="韩昀修" data-level="创始四君"><div class="card-top"><span class="lv lv-f">创始四君</span><span class="no">04</span></div><h3 class="member">韩昀修</h3><p class="title-name">养老金型真空衰变·经济末日精算师·K线图人形黑洞</p></article>
-      <article class="card member-card" data-name="王凯乐" data-level="正洞级"><div class="card-top"><span class="lv lv-1">正洞级</span><span class="no">05</span></div><h3 class="member">王凯乐</h3><p class="title-name">永恒叛逆观测者·量子童话聚合体·文明退行诅咒·无所谓领域绝对主宰</p></article>
-      <article class="card member-card" data-name="魏佳琛（胎盘体）" data-level="副噬级"><div class="card-top"><span class="lv lv-2">副噬级</span><span class="no">06</span></div><h3 class="member">魏佳琛（胎盘体）</h3><p class="title-name">逆熵胎盘集合体·跨维度子宫主宰·悖论分娩者</p></article>
-      <article class="card member-card" data-name="张意德" data-level="正咀级"><div class="card-top"><span class="lv lv-3">正咀级</span><span class="no">07</span></div><h3 class="member">张意德</h3><p class="title-name">孝道相对论具现代·伦理崩坏教师·教案文字活体瘟疫</p></article>
-      <article class="card member-card" data-name="郝鹏宇" data-level="正咀级"><div class="card-top"><span class="lv lv-3">正咀级</span><span class="no">08</span></div><h3 class="member">郝鹏宇</h3><p class="title-name">宏宇宙鸽子协议化身·deadline扭曲力场·混沌会议召集者·无限延期批准官</p></article>
-      
-      <article class="card member-card" data-name="落雨yu" data-level="正咀级"><div class="card-top"><span class="lv lv-3">正咀级</span><span class="no">09</span></div><h3 class="member">落雨yu</h3><p class="title-name">悲伤浓度降水局局长·无用数据清洗者·锈蚀与泪痕之主·潮湿命运纺织工·宁静熵减之雨</p></article>
-      <article class="card member-card" data-name="李子昕" data-level="正咀级"><div class="card-top"><span class="lv lv-3">正咀级</span><span class="no">10</span></div><h3 class="member">李子昕</h3><p class="title-name">永恒旋律编织者·节奏坍缩防御官·无声深渊谱曲人·律动时空校准师·终焉交响终焉体</p></article>
-      
-      
-      
-      
-      <article class="card member-card" data-name="魏佳琛（声波体）" data-level="副嘬级"><div class="card-top"><span class="lv lv-6">副嘬级</span><span class="no">11</span></div><h3 class="member">魏佳琛（声波体）</h3><p class="title-name">深渊回响者·虚空共鸣师·寂灭咏叹者·混沌频率校准者</p></article>
-      
-      
-      <article class="card member-card" data-name="小土豆" data-level="孙员级"><div class="card-top"><span class="lv lv-7">孙员级</span><span class="no">12</span></div><h3 class="member">小土豆</h3><p class="title-name">混沌幼神·马铃薯纪元开启者·泥巴宇宙创世者</p></article>
-      <article class="card member-card" data-name="mlyx" data-level="孙员级"><div class="card-top"><span class="lv lv-7">孙员级</span><span class="no">13</span></div><h3 class="member">mlyx</h3><p class="title-name">不可解析符号实体·协议崩溃触发者·乱码美学先驱·系统日志吞噬体</p></article>
-      <article class="card member-card" data-name="爱" data-level="孙员级"><div class="card-top"><span class="lv lv-7">孙员级</span><span class="no">14</span></div><h3 class="member">爱</h3><p class="title-name">悖论式温柔力场·终焉缓和剂·自我献祭型情感载体·不可量化之连接·反向熵增冲动</p></article>
-      <article class="card member-card" data-name="ouoii3" data-level="孙员级"><div class="card-top"><span class="lv lv-7">孙员级</span><span class="no">15</span></div><h3 class="member">ouoii3</h3><p class="title-name">颜文字维度跃迁体·表情协议后门·未响应状态永恒者·404哲学之父·三号平行宇宙占位符</p></article>
-      
-      <article class="card member-card" data-name="段柯辰（牛肉饼）" data-level="特殊身份"><div class="card-top"><span class="lv lv-s">特殊身份</span><span class="no">16</span></div><h3 class="member">段柯辰（牛肉饼）</h3><p class="title-name">碳基快乐终极形态·蛋白质空间折叠体·酱料维度渗透者·委员会永恒早餐·被遗忘的本体"段柯辰"</p></article>
-      <article class="card member-card" data-name="无名之。" data-level="特殊身份"><div class="card-top"><span class="lv lv-s">特殊身份</span><span class="no">17</span></div><h3 class="member">无名之"。"</h3><p class="title-name">永恒观测者·虚无之形·概念锚点·混沌编辑器</p></article>
+      <article class="card member-card" data-name="郭浩然" data-en-name="Guo Haoran" data-level="创始四君"><div class="card-top"><span class="lv lv-f" data-en="Founding Four">创始四君</span><span class="no">01</span></div><h3 class="member" data-en="Guo Haoran">郭浩然</h3><p class="title-name" data-en="God of Entropic Jianbing · Devourer of the Griddle · King of Ethics-Collapsing Cuisine · Grand Onion-Lord of Parallel Worlds">熵增煎饼之神·鳌子吞噬者·伦理崩坏料理王·平行世界葱花大君</p></article>
+      <article class="card member-card" data-name="崔梓轩" data-en-name="Cui Zixuan" data-level="创始四君"><div class="card-top"><span class="lv lv-f" data-en="Founding Four">创始四君</span><span class="no">02</span></div><h3 class="member" data-en="Cui Zixuan">崔梓轩</h3><p class="title-name" data-en="Quantum Wailing-Plague · Aggregate of Lament Memes · Conductor of the Electronic Suona Symphony">量子哭坟瘟疫·悲鸣模因聚合体·电子喷呐交响指挥</p></article>
+      <article class="card member-card" data-name="崔宇轩" data-en-name="Cui Yuxuan" data-level="创始四君"><div class="card-top"><span class="lv lv-f" data-en="Founding Four">创始四君</span><span class="no">03</span></div><h3 class="member" data-en="Cui Yuxuan">崔宇轩</h3><p class="title-name" data-en="Weaver of Causal Shrouds · Timelines' Undertaker · Sovereign of the Dark-Matter Funeral Linen">因果律寿衣编织者·时间线入殓师·暗物质裹尸布主宰</p></article>
+      <article class="card member-card" data-name="韩昀修" data-en-name="Han Yunxiu" data-level="创始四君"><div class="card-top"><span class="lv lv-f" data-en="Founding Four">创始四君</span><span class="no">04</span></div><h3 class="member" data-en="Han Yunxiu">韩昀修</h3><p class="title-name" data-en="Pension-Type Vacuum Decay · Actuary of Economic Doomsday · The Human K-Line Black Hole">养老金型真空衰变·经济末日精算师·K线图人形黑洞</p></article>
+      <article class="card member-card" data-name="王凯乐" data-en-name="Wang Kaile" data-level="正洞级"><div class="card-top"><span class="lv lv-1" data-en="Top-Cave">正洞级</span><span class="no">05</span></div><h3 class="member" data-en="Wang Kaile">王凯乐</h3><p class="title-name" data-en="Eternal Observer of Rebellion · Quantum Fairy-Tale Aggregate · Curse of Civilizational Regression · Absolute Sovereign of the Whatever-Field">永恒叛逆观测者·量子童话聚合体·文明退行诅咒·无所谓领域绝对主宰</p></article>
+      <article class="card member-card" data-name="魏佳琛（胎盘体）" data-en-name="Wei Jiachen (Placenta)" data-level="副噬级"><div class="card-top"><span class="lv lv-2" data-en="Sub-Devour">副噬级</span><span class="no">06</span></div><h3 class="member" data-en="Wei Jiachen (Placenta)">魏佳琛（胎盘体）</h3><p class="title-name" data-en="Negentropic Placenta Collective · Sovereign of Transdimensional Wombs · Paradoxical Parturient">逆熵胎盘集合体·跨维度子宫主宰·悖论分娩者</p></article>
+      <article class="card member-card" data-name="张意德" data-en-name="Zhang Yide" data-level="正咀级"><div class="card-top"><span class="lv lv-3" data-en="Top-Mouth">正咀级</span><span class="no">07</span></div><h3 class="member" data-en="Zhang Yide">张意德</h3><p class="title-name" data-en="Living Embodiment of Filial Relativity · Teacher of Ethical Collapse · Living Plague of Lesson-Plan Text">孝道相对论具现代·伦理崩坏教师·教案文字活体瘟疫</p></article>
+      <article class="card member-card" data-name="郝鹏宇" data-en-name="Hao Pengyu" data-level="正咀级"><div class="card-top"><span class="lv lv-3" data-en="Top-Mouth">正咀级</span><span class="no">08</span></div><h3 class="member" data-en="Hao Pengyu">郝鹏宇</h3><p class="title-name" data-en="Avatar of the Macrocosmic Pigeon Protocol · Deadline-Warping Field · Convener of Chaos Meetings · Approver of Infinite Extensions">宏宇宙鸽子协议化身·deadline扭曲力场·混沌会议召集者·无限延期批准官</p></article>
+      <article class="card member-card" data-name="落雨yu" data-en-name="Luo Yuyu" data-level="正咀级"><div class="card-top"><span class="lv lv-3" data-en="Top-Mouth">正咀级</span><span class="no">09</span></div><h3 class="member" data-en="Luo Yuyu">落雨yu</h3><p class="title-name" data-en="Director of the Sadness-Precipitation Bureau · Cleanser of Useless Data · Master of Rust & Tear-Stains · Weaver of Damp Fate · Serene Rain of Entropy-Decrease">悲伤浓度降水局局长·无用数据清洗者·锈蚀与泪痕之主·潮湿命运纺织工·宁静熵减之雨</p></article>
+      <article class="card member-card" data-name="李子昕" data-en-name="Li Zixin" data-level="正咀级"><div class="card-top"><span class="lv lv-3" data-en="Top-Mouth">正咀级</span><span class="no">10</span></div><h3 class="member" data-en="Li Zixin">李子昕</h3><p class="title-name" data-en="Eternal Melody Weaver · Rhythm-Collapse Defense Officer · Composer of the Soundless Abyss · Calibrator of the Groove-Timespace · Finale-Symphony Terminal Form">永恒旋律编织者·节奏坍缩防御官·无声深渊谱曲人·律动时空校准师·终焉交响终焉体</p></article>
+      <article class="card member-card" data-name="魏佳琛（声波体）" data-en-name="Wei Jiachen (Sonic)" data-level="副嘬级"><div class="card-top"><span class="lv lv-6" data-en="Sub-Sip">副嘬级</span><span class="no">11</span></div><h3 class="member" data-en="Wei Jiachen (Sonic)">魏佳琛（声波体）</h3><p class="title-name" data-en="Echo of the Abyss · Resonator of the Void · Aria of Extinction · Calibrator of Chaos Frequencies">深渊回响者·虚空共鸣师·寂灭咏叹者·混沌频率校准者</p></article>
+      <article class="card member-card" data-name="小土豆" data-en-name="Little Potato" data-level="孙员级"><div class="card-top"><span class="lv lv-7" data-en="Apprentice Grandson">孙员级</span><span class="no">12</span></div><h3 class="member" data-en="Little Potato">小土豆</h3><p class="title-name" data-en="Infant God of Chaos · Opener of the Potato Era · Creator of the Mud Universe">混沌幼神·马铃薯纪元开启者·泥巴宇宙创世者</p></article>
+      <article class="card member-card" data-name="mlyx" data-en-name="mlyx" data-level="孙员级"><div class="card-top"><span class="lv lv-7" data-en="Apprentice Grandson">孙员级</span><span class="no">13</span></div><h3 class="member" data-en="mlyx">mlyx</h3><p class="title-name" data-en="Unparsable Symbol Entity · Trigger of Protocol Collapse · Pioneer of Garbled Aesthetics · Devourer of System Logs">不可解析符号实体·协议崩溃触发者·乱码美学先驱·系统日志吞噬体</p></article>
+      <article class="card member-card" data-name="爱" data-en-name="Ai" data-level="孙员级"><div class="card-top"><span class="lv lv-7" data-en="Apprentice Grandson">孙员级</span><span class="no">14</span></div><h3 class="member" data-en="Ai">爱</h3><p class="title-name" data-en="Field of Paradoxical Tenderness · Easing Agent of the End · Self-Sacrificial Emotional Vessel · Unquantifiable Connection · Reverse Entropy Impulse">悖论式温柔力场·终焉缓和剂·自我献祭型情感载体·不可量化之连接·反向熵增冲动</p></article>
+      <article class="card member-card" data-name="ouoii3" data-en-name="ouoii3" data-level="孙员级"><div class="card-top"><span class="lv lv-7" data-en="Apprentice Grandson">孙员级</span><span class="no">15</span></div><h3 class="member" data-en="ouoii3">ouoii3</h3><p class="title-name" data-en="Kaomoji Dimension-Jump Form · Backdoor of Emoji Protocols · Eternal 'Not Responding' State · Father of 404 Philosophy · Placeholder of Parallel Universe No.3">颜文字维度跃迁体·表情协议后门·未响应状态永恒者·404哲学之父·三号平行宇宙占位符</p></article>
+      <article class="card member-card" data-name="段柯辰（牛肉饼）" data-en-name="Duan Kechen (Beef Patty)" data-level="特殊身份"><div class="card-top"><span class="lv lv-s" data-en="Special">特殊身份</span><span class="no">16</span></div><h3 class="member" data-en="Duan Kechen (Beef Patty)">段柯辰（牛肉饼）</h3><p class="title-name" data-en="Ultimate Carbon-Based Joy · Folded Protein Space · Sauce-Dimension Permeator · Eternal Breakfast of the Committee · The Forgotten Original 'Duan Kechen'">碳基快乐终极形态·蛋白质空间折叠体·酱料维度渗透者·委员会永恒早餐·被遗忘的本体"段柯辰"</p></article>
+      <article class="card member-card" data-name="无名之。" data-en-name="Nameless '.'" data-level="特殊身份"><div class="card-top"><span class="lv lv-s" data-en="Special">特殊身份</span><span class="no">17</span></div><h3 class="member" data-en="Nameless '.'">无名之"。"</h3><p class="title-name" data-en="Eternal Observer · Form of Nothingness · Conceptual Anchor · Chaos Editor">永恒观测者·虚无之形·概念锚点·混沌编辑器</p></article>
     </div>
-    <p class="note">注：魏佳琛具双形态——胎盘体（副噬级）与声波体（副嘬级）；段柯辰以「牛肉饼」形态存在于委员会；无名之「。」为概念级存在，兼任混沌观测委员会。</p>
+    <p class="note" data-en="Note: Wei Jiachen has dual forms — Placenta Form (Sub-Devour) and Sonic Form (Sub-Sip); Duan Kechen exists in the committee as 'Beef Patty'; Nameless '.' is a conceptual existence, also serving the Chaos-Observation Committee.">注：魏佳琛具双形态——胎盘体（副噬级）与声波体（副嘬级）；段柯辰以「牛肉饼」形态存在于委员会；无名之「。」为概念级存在，兼任混沌观测委员会。</p>
   </div>
 </section>
 
 <!-- ============ 事业部 ============ -->
 <section id="divisions" class="section">
   <div class="container">
-    <h2 class="section-title"><span class="num">05</span>事业部设置</h2>
-    <p class="lead">本公司下设若干事业部，对应各干部之核心权能，实行事业部制经营，独立核算、联动分红。</p>
+    <h2 class="section-title"><span class="num">05</span><span data-en="Business Divisions">事业部设置</span></h2>
+    <p class="lead" data-en="The company runs several divisions mapped to each cadre's core authority, operating as semi-independent units with separate accounting and linkage dividends.">本公司下设若干事业部，对应各干部之核心权能，实行事业部制经营，独立核算、联动分红。</p>
 
-    <h3 class="sub-title">第一节 · 核心事业部（创始四君直辖）</h3>
+    <h3 class="sub-title" data-en="Section 1 · Core Divisions (under the Four Sovereigns)">第一节 · 核心事业部（创始四君直辖）</h3>
     <div class="grid-2">
-      <div class="card div"><h4>熵增料理事业部</h4><p class="who">郭浩然</p><p>平行宇宙煎饼量产、伦理崩坏料理、葱花大君特许经营。神谕产品：「早餐宇宙坍缩体」系列煎饼，咬一口即触发平行世界坍缩。</p></div>
-      <div class="card div"><h4>量子哭坟事业部</h4><p class="who">崔梓轩</p><p>电子喷呐哀乐定制、悲鸣模因投放、亡灵哭坟声场工程。神谕产品：「哭坟K线大崩盘」哀乐叠加服务。</p></div>
-      <div class="card div"><h4>因果入殓事业部</h4><p class="who">崔宇轩</p><p>时间线入殓、因果律寿衣编织、暗物质裹尸布托运。神谕产品：「因果铁砧」闭合服务，专治因果断裂。</p></div>
-      <div class="card div"><h4>经济末日精算事业部</h4><p class="who">韩昀修</p><p>养老金真空衰变咨询、K线图人形黑洞承销、通胀曲率驾驶。神谕产品：「煎饼通胀指数」精算报告。</p></div>
+      <div class="card div"><h4 data-en="Entropic Cuisine Division">熵增料理事业部</h4><p class="who" data-en="Guo Haoran">郭浩然</p><p data-en="Mass-producing parallel-universe jianbing, ethics-collapsing cuisine, scallion-grand-lord franchising. Oracle product: the 'Breakfast Universe Collapse' jianbing — one bite triggers a parallel-world collapse.">平行宇宙煎饼量产、伦理崩坏料理、葱花大君特许经营。神谕产品：「早餐宇宙坍缩体」系列煎饼，咬一口即触发平行世界坍缩。</p></div>
+      <div class="card div"><h4 data-en="Quantum Grave-Wail Division">量子哭坟事业部</h4><p class="who" data-en="Cui Zixuan">崔梓轩</p><p data-en="Custom electronic-suona funeral music, lament-meme deployment, spectral wail-sound engineering. Oracle product: the 'Grave-Wail K-Line Crash' elegy-stacking service.">电子喷呐哀乐定制、悲鸣模因投放、亡灵哭坟声场工程。神谕产品：「哭坟K线大崩盘」哀乐叠加服务。</p></div>
+      <div class="card div"><h4 data-en="Causal Funeral Division">因果入殓事业部</h4><p class="who" data-en="Cui Yuxuan">崔宇轩</p><p data-en="Timeline embalming, causal-shroud weaving, dark-matter funeral-linen shipping. Oracle product: the 'Causal Anvil' closure service — cures broken causality.">时间线入殓、因果律寿衣编织、暗物质裹尸布托运。神谕产品：「因果铁砧」闭合服务，专治因果断裂。</p></div>
+      <div class="card div"><h4 data-en="Economic Doomsday Actuary Division">经济末日精算事业部</h4><p class="who" data-en="Han Yunxiu">韩昀修</p><p data-en="Pension vacuum-decay consulting, K-line human-black-hole underwriting, inflation-curvature driving. Oracle product: the 'Jianbing Inflation Index' actuarial report.">养老金真空衰变咨询、K线图人形黑洞承销、通胀曲率驾驶。神谕产品：「煎饼通胀指数」精算报告。</p></div>
     </div>
 
-    <h3 class="sub-title">第二节 · 职能事业部（干部主理）</h3>
+    <h3 class="sub-title" data-en="Section 2 · Functional Divisions (cadre-led)">第二节 · 职能事业部（干部主理）</h3>
     <div class="grid-3">
-      <div class="card div"><h4>教育伦理事业部</h4><p class="who">张意德</p><p>孝道相对论具现代·伦理崩坏教师·教案文字活体瘟疫</p></div>
-      <div class="card div"><h4>鸽子协议事业部</h4><p class="who">郝鹏宇</p><p>宏宇宙鸽子协议化身·deadline扭曲力场·混沌会议召集者·无限延期批准官</p></div>
-      
-      <div class="card div"><h4>悲伤降水事业部</h4><p class="who">落雨yu</p><p>悲伤浓度降水局局长·无用数据清洗者·锈蚀与泪痕之主·潮湿命运纺织工·宁静熵减之雨</p></div>
-      <div class="card div"><h4>旋律律动事业部</h4><p class="who">李子昕</p><p>永恒旋律编织者·节奏坍缩防御官·无声深渊谱曲人·律动时空校准师·终焉交响终焉体</p></div>
-      <div class="card div"><h4>跨维度生育事业部</h4><p class="who">魏佳琛·胎盘体</p><p>逆熵胎盘集合体·跨维度子宫主宰·悖论分娩者</p></div>
-      
-      
-      
-      
-      <div class="card div"><h4>频率共振事业部</h4><p class="who">魏佳琛·声波体</p><p>深渊回响者·虚空共鸣师·寂灭咏叹者·混沌频率校准者</p></div>
-      
-      
+      <div class="card div"><h4 data-en="Education & Ethics Division">教育伦理事业部</h4><p class="who" data-en="Zhang Yide">张意德</p><p data-en="Living Embodiment of Filial Relativity · Teacher of Ethical Collapse · Living Plague of Lesson-Plan Text">孝道相对论具现代·伦理崩坏教师·教案文字活体瘟疫</p></div>
+      <div class="card div"><h4 data-en="Pigeon Protocol Division">鸽子协议事业部</h4><p class="who" data-en="Hao Pengyu">郝鹏宇</p><p data-en="Avatar of the Macrocosmic Pigeon Protocol · Deadline-Warping Field · Convener of Chaos Meetings · Approver of Infinite Extensions">宏宇宙鸽子协议化身·deadline扭曲力场·混沌会议召集者·无限延期批准官</p></div>
+      <div class="card div"><h4 data-en="Sorrow-Precipitation Division">悲伤降水事业部</h4><p class="who" data-en="Luo Yuyu">落雨yu</p><p data-en="Director of the Sadness-Precipitation Bureau · Cleanser of Useless Data · Master of Rust & Tear-Stains · Weaver of Damp Fate · Serene Rain of Entropy-Decrease">悲伤浓度降水局局长·无用数据清洗者·锈蚀与泪痕之主·潮湿命运纺织工·宁静熵减之雨</p></div>
+      <div class="card div"><h4 data-en="Melody & Groove Division">旋律律动事业部</h4><p class="who" data-en="Li Zixin">李子昕</p><p data-en="Eternal Melody Weaver · Rhythm-Collapse Defense Officer · Composer of the Soundless Abyss · Calibrator of the Groove-Timespace · Finale-Symphony Terminal Form">永恒旋律编织者·节奏坍缩防御官·无声深渊谱曲人·律动时空校准师·终焉交响终焉体</p></div>
+      <div class="card div"><h4 data-en="Transdimensional Birth Division">跨维度生育事业部</h4><p class="who" data-en="Wei Jiachen · Placenta">魏佳琛·胎盘体</p><p data-en="Negentropic Placenta Collective · Sovereign of Transdimensional Wombs · Paradoxical Parturient">逆熵胎盘集合体·跨维度子宫主宰·悖论分娩者</p></div>
+      <div class="card div"><h4 data-en="Frequency Resonance Division">频率共振事业部</h4><p class="who" data-en="Wei Jiachen · Sonic">魏佳琛·声波体</p><p data-en="Echo of the Abyss · Resonator of the Void · Aria of Extinction · Calibrator of Chaos Frequencies">深渊回响者·虚空共鸣师·寂灭咏叹者·混沌频率校准者</p></div>
     </div>
 
-    <h3 class="sub-title">第三节 · 孙员与特殊事业部</h3>
+    <h3 class="sub-title" data-en="Section 3 · Apprentice & Special Divisions">第三节 · 孙员与特殊事业部</h3>
     <div class="grid-3">
-      <div class="card div"><h4>幼神创世事业部</h4><p class="who">小土豆</p><p>混沌幼神·马铃薯纪元开启者·泥巴宇宙创世者</p></div>
-      <div class="card div"><h4>乱码系统事业部</h4><p class="who">mlyx</p><p>不可解析符号实体·协议崩溃触发者·乱码美学先驱·系统日志吞噬体</p></div>
-      <div class="card div"><h4>情感悖论事业部</h4><p class="who">爱</p><p>悖论式温柔力场·终焉缓和剂·自我献祭型情感载体·不可量化之连接·反向熵增冲动</p></div>
-      <div class="card div"><h4>颜文字维度事业部</h4><p class="who">ouoii3</p><p>颜文字维度跃迁体·表情协议后门·未响应状态永恒者·404哲学之父·三号平行宇宙占位符</p></div>
-      
-      <div class="card div"><h4>永恒早餐事业部</h4><p class="who">段柯辰·牛肉饼</p><p>碳基快乐终极形态·蛋白质空间折叠体·酱料维度渗透者·委员会永恒早餐·被遗忘的本体"段柯辰"</p></div>
-      <div class="card div"><h4>概念锚点事业部</h4><p class="who">无名之"。"</p><p>永恒观测者·虚无之形·概念锚点·混沌编辑器——兼任混沌观测委员会</p></div>
+      <div class="card div"><h4 data-en="Infant-God Genesis Division">幼神创世事业部</h4><p class="who" data-en="Little Potato">小土豆</p><p data-en="Infant God of Chaos · Opener of the Potato Era · Creator of the Mud Universe">混沌幼神·马铃薯纪元开启者·泥巴宇宙创世者</p></div>
+      <div class="card div"><h4 data-en="Garbled System Division">乱码系统事业部</h4><p class="who" data-en="mlyx">mlyx</p><p data-en="Unparsable Symbol Entity · Trigger of Protocol Collapse · Pioneer of Garbled Aesthetics · Devourer of System Logs">不可解析符号实体·协议崩溃触发者·乱码美学先驱·系统日志吞噬体</p></div>
+      <div class="card div"><h4 data-en="Emotional Paradox Division">情感悖论事业部</h4><p class="who" data-en="Ai">爱</p><p data-en="Field of Paradoxical Tenderness · Easing Agent of the End · Self-Sacrificial Emotional Vessel · Unquantifiable Connection · Reverse Entropy Impulse">悖论式温柔力场·终焉缓和剂·自我献祭型情感载体·不可量化之连接·反向熵增冲动</p></div>
+      <div class="card div"><h4 data-en="Kaomoji Dimension Division">颜文字维度事业部</h4><p class="who" data-en="ouoii3">ouoii3</p><p data-en="Kaomoji Dimension-Jump Form · Backdoor of Emoji Protocols · Eternal 'Not Responding' State · Father of 404 Philosophy · Placeholder of Parallel Universe No.3">颜文字维度跃迁体·表情协议后门·未响应状态永恒者·404哲学之父·三号平行宇宙占位符</p></div>
+      <div class="card div"><h4 data-en="Eternal Breakfast Division">永恒早餐事业部</h4><p class="who" data-en="Duan Kechen · Beef Patty">段柯辰·牛肉饼</p><p data-en="Ultimate Carbon-Based Joy · Folded Protein Space · Sauce-Dimension Permeator · Eternal Breakfast of the Committee · The Forgotten Original 'Duan Kechen'">碳基快乐终极形态·蛋白质空间折叠体·酱料维度渗透者·委员会永恒早餐·被遗忘的本体"段柯辰"</p></div>
+      <div class="card div"><h4 data-en="Conceptual Anchor Division">概念锚点事业部</h4><p class="who" data-en="Nameless '.'">无名之"。"</p><p data-en="Eternal Observer · Form of Nothingness · Conceptual Anchor · Chaos Editor — also serving the Chaos-Observation Committee">永恒观测者·虚无之形·概念锚点·混沌编辑器——兼任混沌观测委员会</p></div>
     </div>
   </div>
 </section>
@@ -252,14 +239,14 @@
 <!-- ============ 联动技 ============ -->
 <section id="links" class="section section-alt">
   <div class="container">
-    <h2 class="section-title"><span class="num">06</span>混沌联动技机制</h2>
-    <p class="lead">两个以上事业部联合经营时，依《混沌宇宙·角色命名与联动规范》生成「联动技」，格式为「核心词A × 核心词B」＋ 效果描述。须登记于《混沌联动技台账》，由频率共振事业部统一校准频率。</p>
+    <h2 class="section-title"><span class="num">06</span><span data-en="Chaos Linkage Techniques">混沌联动技机制</span></h2>
+    <p class="lead" data-en="When two or more divisions operate jointly, a 'Linkage Technique' is generated per the Chaos-Verse Naming & Linkage Code, formatted as 'Core-A × Core-B' + effect. It must be logged in the Chaos Linkage Ledger and frequency-calibrated by the Frequency Resonance Division.">两个以上事业部联合经营时，依《混沌宇宙·角色命名与联动规范》生成「联动技」，格式为「核心词A × 核心词B」＋ 效果描述。须登记于《混沌联动技台账》，由频率共振事业部统一校准频率。</p>
     <div class="grid-2">
-      <div class="card link"><h4>「锈雨哭坟二重奏」</h4><p class="who">落雨yu 锈雨/泪痕 × 崔梓轩 哭坟声</p><p>亡灵与金属同时泪流满面。</p></div>
-      <div class="card link"><h4>「煎饼铁砧大爆炸」</h4><p class="who">郭浩然 煎饼 × 崔宇轩 因果铁砧</p><p>摊出可砸碎概念的名字。</p></div>
-      <div class="card link"><h4>「哭坟K线大崩盘」</h4><p class="who">崔梓轩 喷呐 × 韩昀修 真空衰变</p><p>养老金真空衰变叠加量子哭坟声波，所有股票 K线图集体奏哀乐。</p></div>
-      <div class="card link"><h4>「煎饼通胀指数」</h4><p class="who">郭浩然 煎饼 × 韩昀修 真空衰变</p><p>熵增煎饼价格随真空衰变指数暴涨，咬一口触发全宇宙经济警报。</p></div>
-      <div class="card link"><h4>「声波锈雨共振」</h4><p class="who">魏佳琛·声波体 × 落雨yu</p><p>虚空共鸣与锈雨共振，金属开始集体写遗嘱。</p></div>
+      <div class="card link"><h4 data-en="'Rust-Rain & Grave-Wail Duet'">「锈雨哭坟二重奏」</h4><p class="who" data-en="Luo Yuyu rust-rain/tear-stains × Cui Zixuan wail sound">落雨yu 锈雨/泪痕 × 崔梓轩 哭坟声</p><p data-en="The dead and the metal weep simultaneously.">亡灵与金属同时泪流满面。</p></div>
+      <div class="card link"><h4 data-en="'Jianbing-Anvil Big Bang'">「煎饼铁砧大爆炸」</h4><p class="who" data-en="Guo Haoran jianbing × Cui Yuxuan causal anvil">郭浩然 煎饼 × 崔宇轩 因果铁砧</p><p data-en="Cooks up names that can shatter concepts.">摊出可砸碎概念的名字。</p></div>
+      <div class="card link"><h4 data-en="'Grave-Wail & K-Line Crash'">「哭坟K线大崩盘」</h4><p class="who" data-en="Cui Zixuan suona × Han Yunxiu vacuum decay">崔梓轩 喷呐 × 韩昀修 真空衰变</p><p data-en="Pension vacuum-decay stacked with quantum wail sound waves — every stock K-line plays a funeral march.">养老金真空衰变叠加量子哭坟声波，所有股票 K线图集体奏哀乐。</p></div>
+      <div class="card link"><h4 data-en="'Jianbing Inflation Index'">「煎饼通胀指数」</h4><p class="who" data-en="Guo Haoran jianbing × Han Yunxiu vacuum decay">郭浩然 煎饼 × 韩昀修 真空衰变</p><p data-en="Entropic jianbing prices surge with the vacuum-decay index; one bite triggers a universe-wide economic alarm.">熵增煎饼价格随真空衰变指数暴涨，咬一口触发全宇宙经济警报。</p></div>
+      <div class="card link"><h4 data-en="'Sonic-Rust Resonance'">「声波锈雨共振」</h4><p class="who" data-en="Wei Jiachen · Sonic × Luo Yuyu">魏佳琛·声波体 × 落雨yu</p><p data-en="Void resonance and rust-rain resonate; metal begins writing its will en masse.">虚空共鸣与锈雨共振，金属开始集体写遗嘱。</p></div>
     </div>
   </div>
 </section>
@@ -267,33 +254,25 @@
 <!-- ============ 经营范围 ============ -->
 <section id="business" class="section">
   <div class="container">
-    <h2 class="section-title"><span class="num">07</span>经营范围（混沌特色荒诞业务）</h2>
-    <p class="lead">经登记机关核准，本公司经营范围如下（神谕表述），共十六类。</p>
+    <h2 class="section-title"><span class="num">07</span><span data-en="Business Scope (Chaos Absurd Ventures)">经营范围（混沌特色荒诞业务）</span></h2>
+    <p class="lead" data-en="As approved by the registry, the company's business scope is as follows (oracle phrasing), 16 categories in total.">经登记机关核准，本公司经营范围如下（神谕表述），共十六类。</p>
     <ol class="biz-list">
-      <li>熵增料理与平行宇宙煎饼的量产、特许经营及伦理崩坏餐饮服务；</li>
-      <li>量子哭坟、电子喷呐哀乐定制与悲鸣模因投放工程；</li>
-      <li>因果律寿衣编织、时间线入殓与暗物质裹尸布托运；</li>
-      <li>养老金真空衰变咨询、K线图人形黑洞承销及经济末日精算；</li>
-      <li>孝道相对论教育培训、教案文字活体瘟疫防治；</li>
-      <li>宏宇宙鸽子协议履约、deadline 扭曲与无限延期批准；</li>
-      
-      <li>悲伤浓度降水、无用数据清洗与宁静熵减之雨供应；</li>
-      <li>永恒旋律编织、节奏坍缩防御与无声深渊谱曲；</li>
-      <li>逆熵胎盘代孕、跨维度子宫主宰与悖论分娩；</li>
-      
-      
-      
-      
-      <li>深渊回响、虚空共鸣与混沌频率校准；</li>
-      
-      
-      <li>混沌幼神创世、马铃薯纪元开启与泥巴宇宙承建；</li>
-      <li>不可解析符号实体经纪、协议崩溃触发与乱码美学策展；</li>
-      <li>悖论式温柔力场输送、反向熵增冲动疗愈；</li>
-      <li>颜文字维度跃迁、表情协议后门维护与 404 哲学布道；</li>
-      
-      <li>碳基快乐终极形态（牛肉饼）供应、蛋白质空间折叠与酱料维度渗透；</li>
-      <li>概念锚点设立、虚无之形租赁与混沌编辑外包。</li>
+      <li data-en="Mass production, franchising and ethics-collapsing catering of entropic cuisine & parallel-universe jianbing;">熵增料理与平行宇宙煎饼的量产、特许经营及伦理崩坏餐饮服务；</li>
+      <li data-en="Custom quantum grave-wail & electronic-suona elegies, and lament-meme deployment engineering;">量子哭坟、电子喷呐哀乐定制与悲鸣模因投放工程；</li>
+      <li data-en="Causal-shroud weaving, timeline embalming, and dark-matter funeral-linen shipping;">因果律寿衣编织、时间线入殓与暗物质裹尸布托运；</li>
+      <li data-en="Pension vacuum-decay consulting, K-line human-black-hole underwriting, and economic-doomsday actuary;">养老金真空衰变咨询、K线图人形黑洞承销及经济末日精算；</li>
+      <li data-en="Filial-relativity education training, and lesson-plan-text living-plague prevention;">孝道相对论教育培训、教案文字活体瘟疫防治；</li>
+      <li data-en="Macrocosmic pigeon-protocol fulfillment, deadline warping, and infinite-extension approval;">宏宇宙鸽子协议履约、deadline 扭曲与无限延期批准；</li>
+      <li data-en="Sadness-concentration precipitation, useless-data cleansing, and serene entropy-decrease rain supply;">悲伤浓度降水、无用数据清洗与宁静熵减之雨供应；</li>
+      <li data-en="Eternal-melody weaving, rhythm-collapse defense, and soundless-abyss composition;">永恒旋律编织、节奏坍缩防御与无声深渊谱曲；</li>
+      <li data-en="Negentropic placenta surrogacy, transdimensional-womb sovereignty, and paradoxical parturition;">逆熵胎盘代孕、跨维度子宫主宰与悖论分娩；</li>
+      <li data-en="Abyss echoing, void resonance, and chaos-frequency calibration;">深渊回响、虚空共鸣与混沌频率校准；</li>
+      <li data-en="Infant-god genesis, potato-era opening, and mud-universe construction;">混沌幼神创世、马铃薯纪元开启与泥巴宇宙承建；</li>
+      <li data-en="Unparsable-symbol entity brokerage, protocol-collapse triggering, and garbled-aesthetics curation;">不可解析符号实体经纪、协议崩溃触发与乱码美学策展；</li>
+      <li data-en="Paradoxical-tenderness field delivery, and reverse-entropy-impulse therapy;">悖论式温柔力场输送、反向熵增冲动疗愈；</li>
+      <li data-en="Kaomoji dimension-jumping, emoji-protocol backdoor maintenance, and 404-philosophy preaching;">颜文字维度跃迁、表情协议后门维护与 404 哲学布道；</li>
+      <li data-en="Ultimate carbon-based joy (beef patty) supply, protein-space folding, and sauce-dimension permeation;">碳基快乐终极形态（牛肉饼）供应、蛋白质空间折叠与酱料维度渗透；</li>
+      <li data-en="Conceptual-anchor establishment, nothingness-form leasing, and chaos-editing outsourcing.">概念锚点设立、虚无之形租赁与混沌编辑外包。</li>
     </ol>
   </div>
 </section>
@@ -302,16 +281,16 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div>
-      <p class="footer-brand">CJHDTSSZWYH · 崔家黑洞吞噬孙子委员会集团有限公司</p>
-      <p class="footer-line">有限责任公司（终焉体控股） · 四君共治 · 注册资本 ¥25.00</p>
-      <p class="footer-line">注册住所：混沌宇宙·熵增煎饼神殿视界内（虚拟注册地）</p>
+      <p class="footer-brand" data-en="CJHDTSSZWYH · Cui Family Black-Hole Devouring-Grandson Committee Group Co., Ltd.">CJHDTSSZWYH · 崔家黑洞吞噬孙子委员会集团有限公司</p>
+      <p class="footer-line" data-en="LLC (Terminal-Entity Holding) · Co-governed by Four Sovereigns · Registered Capital ¥25.00">有限责任公司（终焉体控股） · 四君共治 · 注册资本 ¥25.00</p>
+      <p class="footer-line" data-en="Registered Domicile: within the Event Horizon of the Entropy-Jianbing Pantheon, Chaos-Verse (virtual domicile)">注册住所：混沌宇宙·熵增煎饼神殿视界内（虚拟注册地）</p>
     </div>
     <div class="footer-meta">
-      <p>吞噬冗余，分娩秩序；以神谕之姿，行市井之事。</p>
-      <p class="footer-small">本章程自四君签章、概念锚点见证之日起生效 · 解释权归董事会</p>
+      <p data-en="Devour the redundant, deliver order; in the bearing of an oracle, the deeds of the mundane.">吞噬冗余，分娩秩序；以神谕之姿，行市井之事。</p>
+      <p class="footer-small" data-en="This charter takes effect upon the Four Sovereigns' signing and the Conceptual Anchor's witnessing · Interpretation rests with the Board">本章程自四君签章、概念锚点见证之日起生效 · 解释权归董事会</p>
     </div>
   </div>
-  <p class="footer-copy">© 奇点大爆炸 — 宇宙热寂 · 崔家黑洞吞噬孙子委员会 保留一切终焉体权利</p>
+  <p class="footer-copy" data-en="© Big Bang — Universal Heat Death · Cui Family Black-Hole Devouring-Grandson Committee reserves all Terminal-Entity rights">© 奇点大爆炸 — 宇宙热寂 · 崔家黑洞吞噬孙子委员会 保留一切终焉体权利</p>
 </footer>
 
 <button id="toTop" class="to-top" aria-label="返回顶部">↑</button>
