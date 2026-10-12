@@ -67,6 +67,7 @@
     <p class="hero-sub" data-en="Cui Family Black-Hole Devouring-Grandson Committee">崔家黑洞吞噬孙子委员会</p>
     <p class="hero-tag" data-en="Devour the redundant, deliver order; in the bearing of an oracle, the deeds of the mundane.">吞噬冗余，分娩秩序；以神谕之姿，行市井之事。</p>
     <div class="hero-cta">
+      <button type="button" class="btn btn-apply" id="applyOpen" data-en="Apply to Join">申请加入</button>
       <a class="btn btn-gold" href="#roster" data-en="View 18 Members">查看十八席名录</a>
       <a class="btn btn-ghost" href="#world" data-en="Explore Worldview">了解世界观</a>
     </div>
@@ -116,7 +117,7 @@
     <p class="lead" data-en="The shareholders are the Four Founding Sovereigns, jointly called 'the Four Sovereigns'. Equal co-owners with voting, dividend and singularity-disposal rights — the actual owners and ultimate liability bearers. Major matters require unanimous consent.">本公司股东为创始四君，合称「四君」。互为平等共有人，享有表决权、分红权与奇点处置权，并为本公司之实际老板与最终责任人。重大事项须四君一致同意。</p>
     <div class="grid-4">
       <article class="card founder">
-        <span class="lv lv-founder" data-en="Chairman (Rotating)">董事长（轮值）</span>
+        <span class="lv lv-founder" data-en="God of Creation">创世神</span>
         <h3 class="member" data-en="Guo Haoran">郭浩然</h3>
         <p class="title-name" data-en="God of Entropic Jianbing · Devourer of the Griddle · King of Ethics-Collapsing Cuisine · Grand Onion-Lord of Parallel Worlds">熵增煎饼之神·鳌子吞噬者·伦理崩坏料理王·平行世界葱花大君</p>
         <p class="power" data-en="Core Authority: Entropic Cuisine · Multiversal Jianbing">核心权能：熵增料理 · 平行宇宙摊饼</p>
@@ -299,6 +300,51 @@
 </footer>
 
 <button id="toTop" class="to-top" aria-label="返回顶部">↑</button>
+
+<!-- ============ 申请加入弹窗 ============ -->
+<div class="apply-modal" id="applyModal" hidden aria-hidden="true">
+  <div class="apply-backdrop" data-close></div>
+  <div class="apply-card" role="dialog" aria-modal="true" aria-labelledby="applyTitle">
+
+    <!-- 表单视图 -->
+    <div class="apply-view" id="applyFormView">
+      <button type="button" class="apply-close" id="applyCloseX" aria-label="关闭">✕</button>
+      <h2 class="apply-title" id="applyTitle" data-en="Apply to Join CJHDTSSZWYH">申请加入 CJHDTSSZWYH</h2>
+      <p class="apply-sub" data-en="Submit your materials to become a Terminal-Entity. (The oracle channel is not yet open — nothing can be submitted.)">提交你的资料，成为终焉体一员。（神谕通道尚未开启，资料无法提交。）</p>
+      <form class="apply-form" id="applyForm" onsubmit="return false">
+        <label class="apply-field">
+          <span data-en="True Name">真名实姓</span>
+          <input type="text" disabled placeholder="—" data-en-ph="Cannot be entered" />
+        </label>
+        <label class="apply-field">
+          <span data-en="Terminal-Entity Codename">终焉体代号</span>
+          <input type="text" disabled placeholder="—" data-en-ph="Cannot be entered" />
+        </label>
+        <label class="apply-field">
+          <span data-en="Oracle Proof">神谕证明</span>
+          <textarea rows="3" disabled placeholder="—" data-en-ph="Cannot be entered"></textarea>
+        </label>
+        <p class="apply-note" data-en="⚠ All fields are sealed by the Four Sovereigns. Submission is currently disabled.">⚠ 所有字段均被四君封存，当前无法提交。</p>
+      </form>
+      <div class="apply-actions">
+        <button type="button" class="btn btn-ghost" id="applyCancel" data-en="Cancel">取消</button>
+        <button type="button" class="btn btn-gold" id="applyConfirm" data-en="Confirm">确认</button>
+      </div>
+    </div>
+
+    <!-- 拒绝视图 -->
+    <div class="apply-view apply-reject" id="applyRejectView" hidden>
+      <button type="button" class="apply-close" id="applyCloseX2" aria-label="关闭">✕</button>
+      <div class="apply-reject-icon">✕</div>
+      <h2 class="apply-title" data-en="Application Rejected">申请已被驳回</h2>
+      <p class="apply-reject-msg" data-en="You are not divine enough. Application rejected.">你不够神，拒绝申请。</p>
+      <div class="apply-actions apply-actions-center">
+        <button type="button" class="btn btn-gold" id="applyBack" data-en="Return">返回</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <script src="assets/script.js"></script>
 </body>
