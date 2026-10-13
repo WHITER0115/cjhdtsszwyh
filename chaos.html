@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>混沌宇宙 · 崔家黑洞吞噬孙子委员会</title>
+<meta name="description" content="混沌宇宙长篇连载 · 崔家黑洞吞噬孙子委员会同人小说。" />
+<link rel="stylesheet" href="assets/chaos.css" />
+</head>
+<body>
+<!-- ============ 全色背景氛围光斑 ============ -->
+<div class="bg-blobs" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+</div>
+
+<!-- ============ 导航 ============ -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">CJHDTSSZWYH</a>
+  <div class="nav-right">
+    <a class="nav-back" href="index.html" data-en="← Home">← 返回主页</a>
+    <button class="lang-toggle" id="chaosLangToggle" aria-label="切换语言">EN</button>
+  </div>
+</nav>
+
+<!-- ============ 小说头图 ============ -->
+<header class="chaos-hero">
+  <div class="container">
+    <p class="chaos-kicker" data-en="Chaos-Verse">混沌宇宙</p>
+    <h1 class="chaos-title" data-en="Cui Family Black-Hole Devouring-Grandson Committee">崔家黑洞吞噬孙子委员会</h1>
+    <p class="chaos-sub" data-en="A serialized novel of the Chaos-Verse. Pick a chapter to begin.">混沌宇宙长篇连载。选择下方章节，开始阅读。</p>
+  </div>
+</header>
+
+<!-- ============ 章节目录 ============ -->
+<main class="container chaos-main">
+  <h2 class="section-title"><span class="num">00</span><span data-en="Table of Contents">章节目录</span></h2>
+  <div class="chaos-chapters" id="chaosChapterList"></div>
+  <p class="chaos-foot-note" data-en="New chapters will appear here. To update one chapter, just edit the matching file under chaos-chapters/.">新章节将在此列出。更新某一章，只需修改 <code>chaos-chapters/</code> 下对应的章节文件，无需改动网页其它代码。</p>
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="footer-brand" data-en="CJHDTSSZWYH · Cui Family Black-Hole Devouring-Grandson Committee">CJHDTSSZWYH · 崔家黑洞吞噬孙子委员会</p>
+    <p class="footer-line" data-en="Devour the redundant, deliver order; in the bearing of an oracle, the deeds of the mundane.">吞噬冗余，分娩秩序；以神谕之姿，行市井之事。</p>
+  </div>
+  <p class="footer-copy" data-en="© Big Bang — Universal Heat Death">© 奇点大爆炸 — 宇宙热寂</p>
+</footer>
+
+<!-- ============ 阅读层 ============ -->
+<div class="reader-modal" id="chaosReader" hidden aria-hidden="true">
+  <div class="reader-backdrop" data-close></div>
+  <div class="reader-card" role="dialog" aria-modal="true" aria-labelledby="chaosReaderTitle">
+    <button type="button" class="reader-close" id="chaosReaderClose" aria-label="关闭">✕</button>
+    <h2 class="reader-title" id="chaosReaderTitle"></h2>
+    <div class="reader-body" id="chaosReaderBody"></div>
+    <div class="reader-foot">
+      <button type="button" class="btn btn-ghost" id="chaosReaderBack" data-en="Close">关闭</button>
+    </div>
+  </div>
+</div>
+
+<!-- 章节数据：每章一个独立文件。更新某章内容，只改对应文件即可 -->
+<script src="chaos-chapters/prologue.js"></script>
+<script src="chaos-chapters/ch1.js"></script>
+<script src="chaos-chapters/ch2.js"></script>
+<script src="assets/chaos.js"></script>
+</body>
+</html>
