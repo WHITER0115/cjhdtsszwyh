@@ -97,9 +97,9 @@
   }
 
   // ===== 自动发现章节 =====
-  // 加载 chaos-chapters/prologue.js 与 ch1..ch99.js，文件不存在则静默跳过（onerror）。
+  // 加载 chaos-chapters/prologue.js 与 ch1..ch1100.js，文件不存在则静默跳过（onerror）。
   // 新增章节：在 chaos-chapters/ 放入 chN.js（id 用 'chN'）即可自动出现在目录，无需改代码。
-  var CH_MAX = 99;
+  var CH_MAX = 1100;
   var pending = 0, totalCh = 1 + CH_MAX, finalFired = false;
   function afterLoad() {
     pending++;
