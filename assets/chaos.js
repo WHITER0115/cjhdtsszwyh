@@ -2,7 +2,9 @@
 (function () {
   'use strict';
   var KEY = 'cjhdtsszwyh-lang';
-  var chapters = window.CHAOS_CHAPTERS || [];
+  // 章节数据由 chaos-chapters/*.js 注入；先把全局数组建好，章节文件会 push 进来
+  window.CHAOS_CHAPTERS = window.CHAOS_CHAPTERS || [];
+  var chapters = window.CHAOS_CHAPTERS;
   var list = document.getElementById('chaosChapterList');
   var reader = document.getElementById('chaosReader');
   var titleEl = document.getElementById('chaosReaderTitle');
@@ -21,9 +23,17 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
+  // 章节排序：序章排最前，chN 按数字排（避免 ch10 排在 ch2 前面）
+  function orderOf(id) {
+    if (id === 'prologue') return 0;
+    var m = /^ch(\d+)$/.exec(id || '');
+    return m ? parseInt(m[1], 10) : 1e6;
+  }
+
   function renderList() {
     if (!list) return;
     list.innerHTML = '';
+    chapters.sort(function (a, b) { return orderOf(a.id) - orderOf(b.id); });
     var en = isEn();
     chapters.forEach(function (ch) {
       var btn = document.createElement('button');
@@ -85,6 +95,29 @@
     renderList();
     if (current && !reader.hidden) openChapter(current.id);
   }
+
+  // ===== 自动发现章节 =====
+  // 加载 chaos-chapters/prologue.js 与 ch1..ch99.js，文件不存在则静默跳过（onerror）。
+  // 新增章节：在 chaos-chapters/ 放入 chN.js（id 用 'chN'）即可自动出现在目录，无需改代码。
+  var CH_MAX = 99;
+  var pending = 0, totalCh = 1 + CH_MAX, finalFired = false;
+  function afterLoad() {
+    pending++;
+    renderList();
+    if (pending >= totalCh && !finalFired) { finalFired = true; renderList(); }
+  }
+  function loadChapter(src) {
+    var s = document.createElement('script');
+    s.src = src;
+    s.async = false;
+    s.onload = afterLoad;
+    s.onerror = afterLoad;
+    document.body.appendChild(s);
+  }
+  loadChapter('chaos-chapters/prologue.js');
+  for (var ci = 1; ci <= CH_MAX; ci++) loadChapter('chaos-chapters/ch' + ci + '.js');
+  // 兜底：个别环境若 onload/onerror 未触发，超时后强制渲染一次，确保已加载章节一定显示
+  setTimeout(function () { if (!finalFired) { finalFired = true; renderList(); } }, 2000);
 
   // init
   var saved = null;

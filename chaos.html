@@ -37,7 +37,7 @@
 <main class="container chaos-main">
   <h2 class="section-title"><span class="num">00</span><span data-en="Table of Contents">章节目录</span></h2>
   <div class="chaos-chapters" id="chaosChapterList"></div>
-  <p class="chaos-foot-note" data-en="New chapters will appear here. To update one chapter, just edit the matching file under chaos-chapters/.">新章节将在此列出。更新某一章，只需修改 <code>chaos-chapters/</code> 下对应的章节文件，无需改动网页其它代码。</p>
+  <p class="chaos-foot-note" data-en="New chapters appear here automatically. To add one, just drop a chN.js file into chaos-chapters/ — no code changes needed.">新章节会自动出现在此处。要新增一章，只需在 <code>chaos-chapters/</code> 放入一个 <code>chN.js</code> 文件，无需改动任何网页代码。</p>
 </main>
 
 <!-- ============ 页脚 ============ -->
@@ -62,10 +62,7 @@
   </div>
 </div>
 
-<!-- 章节数据：每章一个独立文件。更新某章内容，只改对应文件即可 -->
-<script src="chaos-chapters/prologue.js"></script>
-<script src="chaos-chapters/ch1.js"></script>
-<script src="chaos-chapters/ch2.js"></script>
+<!-- 章节数据：由 assets/chaos.js 自动加载 chaos-chapters/ 下的 prologue.js 与 chN.js，新增章节无需改动本页 -->
 <script src="assets/chaos.js"></script>
 </body>
 </html>
